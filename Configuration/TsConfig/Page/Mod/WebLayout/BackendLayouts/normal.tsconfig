@@ -1,0 +1,30 @@
+#
+# BACKENDLAYOUT: Normal
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            normal {
+                title = LLL:EXT:corporate_template/Resources/Private/Language/locallang_be.xlf:backend_layout.Normal
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Normal
+                                        identifier = normal
+                                        colPos = 1
+                                        colspan = 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

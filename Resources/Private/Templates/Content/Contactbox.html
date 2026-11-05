@@ -1,0 +1,24 @@
+<div class="foot-third dontHide">
+  
+  <div class="f-title-one">{data.tx_corporatetemplate_contacttitleone}</div>
+  <div class="f-title-two">{data.tx_corporatetemplate_contacttitletwo}</div>
+  
+  <div class="f-data adress">
+    <img src="{f:uri.resource(path: 'EXT:corporate_template/Resources/Public/Images/adress-ico.png')}" alt=""> 
+    <p>{data.tx_corporatetemplate_row1left}: </p>
+    <span><f:if condition="{data.tx_corporatetemplate_row1right}">{data.tx_corporatetemplate_row1right}</f:if></span>
+  </div>
+  
+  <div class="f-data phone">
+    <img src="{f:uri.resource(path: 'EXT:corporate_template/Resources/Public/Images/phone-ico.png')}" alt=""> 
+    <p>{data.tx_corporatetemplate_row2left}: </p>
+    <span><a href="tel:{data.tx_corporatetemplate_row2right}">{data.tx_corporatetemplate_row2right}</a></span>
+  </div>
+  
+  <div class="f-data e-mail">
+    <img src="{f:uri.resource(path: 'EXT:corporate_template/Resources/Public/Images/mail-ico.png')}" alt=""> 
+    <p>{data.tx_corporatetemplate_row3left}: </p>
+    <span><a href="mailto:{data.tx_corporatetemplate_row3right}">{data.tx_corporatetemplate_row3right}</a></span>
+  </div>  
+  
+</div>

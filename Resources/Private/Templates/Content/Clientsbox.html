@@ -1,0 +1,53 @@
+<div class="half car-show-2 dontHide">
+  <div class="title-one">{data.tx_corporatetemplate_clientstitleone}</div>
+  <div class="title-two">{data.tx_corporatetemplate_clientstitletwo}</div>
+  <div class="show">
+    <div class="caroussel-2">
+      <div class="caroussel-list-2">
+        
+        <f:if condition="{data_tx_corporatetemplate_clientsboxmain}">                       
+          <f:for each="{data_tx_corporatetemplate_clientsboxmain}" as="data_item"> 
+            <div class="car-quote">
+              <div class="testimonials">
+                
+                <f:if condition="{data_item.data_tx_corporatetemplate_client1img}">
+                  <f:for each="{data_item.data_tx_corporatetemplate_client1img}" as="file">
+                    <div class="avatar"><f:image image="{file}" alt="{file.alternative}" title="{file.title}" /></div> 
+                  </f:for>
+                </f:if>                                                    
+                
+                <div class="comment">
+                  "<f:if condition="{data_item.data.tx_corporatetemplate_client1comment}"><f:format.nl2br>{data_item.data.tx_corporatetemplate_client1comment}</f:format.nl2br></f:if>"<br><br>
+                  <span>{data_item.data.tx_corporatetemplate_client1name}, </span>
+                  {data_item.data.tx_corporatetemplate_client1position}
+                </div>
+                
+                <div class="clear q-spacer"></div> 
+                
+                <f:if condition="{data_item.data_tx_corporatetemplate_client2img}">
+                  <f:for each="{data_item.data_tx_corporatetemplate_client2img}" as="file">
+                    <div class="avatar"><f:image image="{file}" alt="{file.alternative}" title="{file.title}" /></div> 
+                  </f:for>
+                </f:if>                                                    
+                <div class="comment">
+                  "<f:if condition="{data_item.data.tx_corporatetemplate_client2comment}"><f:format.nl2br>{data_item.data.tx_corporatetemplate_client2comment}</f:format.nl2br></f:if>"<br><br>
+                  <span><f:if condition="{data_item.data.tx_corporatetemplate_client2name}">{data_item.data.tx_corporatetemplate_client2name}</f:if>, </span>
+                  <f:if condition="{data_item.data.tx_corporatetemplate_client2position}">{data_item.data.tx_corporatetemplate_client2position}</f:if>
+                </div> 
+                
+              </div>
+            </div> <!-- car-quote -->
+          </f:for>                       
+        </f:if>                          
+        
+      </div>
+    </div>
+    
+    <div class="car-prev-2"></div>
+    <div class="car-next-2"></div>
+  </div>
+  <div class="controller-2">
+    <ul>
+    </ul>
+  </div>
+</div>

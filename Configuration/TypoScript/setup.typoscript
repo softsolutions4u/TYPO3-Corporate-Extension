@@ -1,0 +1,5 @@
+# Static template "corporate template" (for sites using a sys_template record).
+# Sites using the site set "corporate-template/site" get fluid_styled_content
+# through the set dependency and must not add this static template additionally.
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:corporate_template/Configuration/TypoScript/Main/setup.typoscript'

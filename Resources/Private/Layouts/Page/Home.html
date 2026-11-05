@@ -1,0 +1,23 @@
+<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '12'}" />
+<div id="undefined-sticky-wrapper" class="sticky-wrapper" style="height: 75px;">
+ <header class="header">
+  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: settings.homePageUid,  colPos: '13'}" />
+  <nav class="menu">
+   <f:render partial="Header" arguments="{_all}" />
+  </nav>
+  <div id="lang_menu">
+    <ul id="active-lang-menu">
+      <f:render partial="LanguageMenu" arguments="{languageNavigation: languageNavigation}" />
+    </ul>
+    <ul id="inactive-lang-menu">
+      <f:render partial="LanguageMenu" arguments="{languageNavigation: languageNavigation}" />
+    </ul>
+  </div>
+  <nav id="nav2" class="mobile-menu">
+   <a class="jump-menu" title="Show navigation">Show navigation</a>
+   <f:render partial="Header" arguments="{_all}" />
+  </nav>    
+ </header>
+</div>
+<f:render section="Main" />
+<f:render partial="Footer" arguments="{_all}" />

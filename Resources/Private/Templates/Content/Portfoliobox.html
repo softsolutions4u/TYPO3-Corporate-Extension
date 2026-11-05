@@ -1,0 +1,137 @@
+<article id="menu4" class="content dark">
+  <header class="title one">{data.tx_corporatetemplate_portfoliotitle}</header>
+  <div class="spacer"></div>
+  <div class="title two">{data.tx_corporatetemplate_portfoliosubtitle}</div>
+  <div id="portfolio" class="container">
+    <div class="section portfoliocontent">
+      <div id="options" class="clear">
+        <div id="filters" class="option-set clearfix foliomenu dontHide" data-option-key="filter">
+          <a href="#filter" data-option-value="*" class="p-selected folio-btn"><div class="portfolio-btn">All</div></a>
+          <f:if condition="{data_tx_corporatetemplate_categoriesbox}">
+            <f:for each="{data_tx_corporatetemplate_categoriesbox}" as="data_item">
+              <a href="#filter" data-option-value=".<f:if condition='{data_item.data.tx_corporatetemplate_filtervalue}'>{data_item.data.tx_corporatetemplate_filtervalue}</f:if>" class="folio-btn">
+                <div class="portfolio-btn">{data_item.data.tx_corporatetemplate_filtername}</div>
+              </a> 
+            </f:for>
+          </f:if>
+          
+        </div>
+      </div>
+      <div class="clear"></div>
+      
+      <div id="project-show"></div>
+      <div class="project-window">
+        <div class="project-content">
+          
+        </div><!-- AJAX Dinamic Content -->
+      </div>
+      
+      <!-- portfolio list - begin -->
+      <div id="i-portfolio" class="clear isotope">
+        <div class="inici"></div>
+        <!-- generating list - begin -->
+        <f:if condition="{data_tx_corporatetemplate_portfolioitems}">
+          <f:for each="{data_tx_corporatetemplate_portfolioitems}" as="data_item" iteration="portfolioItems">
+            <!-- category adding into the class property - begin -->
+            <div class="ch-grid element
+            <f:if condition="{data_item.data_tx_corporatetemplate_categoriesitem}">
+            <f:for each="{data_item.data_tx_corporatetemplate_categoriesitem}" as="data_item_data_item">
+            {data_item_data_item.data.tx_corporatetemplate_categoryvalueitem}
+          </f:for>
+          </f:if>
+            isotope-item" id="portfolio-{portfolioItems.index}.html" data-id='portfolio-{portfolioItems.index}'>
+              <!-- category adding into the class property - end -->
+              
+              <f:if condition="{data_item.data_tx_corporatetemplate_thumbnailimage}">
+                <f:for each="{data_item.data_tx_corporatetemplate_thumbnailimage}" as="file">
+                  <f:image image="{file}" alt="{file.alternative}" title="{file.title}" class="ch-item" />
+                </f:for>
+              </f:if>
+              
+              <div>
+                <span>
+                  <span class="p-category"></span>
+                  {data_item.data.tx_corporatetemplate_shorttitleitem}
+                  
+                  <span class="cat2">
+                    <f:if condition="{data_item.data_tx_corporatetemplate_categoriesitem}">
+                      <f:for each="{data_item.data_tx_corporatetemplate_categoriesitem}" as="data_item_data_item" iteration="portfolioItemCategories">
+                        <f:if condition="{portfolioItemCategories.index} == 0">{data_item_data_item.data.tx_corporatetemplate_categorynameitem}</f:if>
+                      </f:for>
+                    </f:if>
+                  </span>
+                  
+                </span>
+              </div>
+            </div>
+            
+            
+          </f:for>
+          
+        </f:if>
+        <!-- generating list - end -->
+        <div class="final"></div>
+      </div> 
+      <!-- portfolio list - end -->
+      
+      
+    </div>
+  </div>
+  <div class="clear"></div>
+</article>
+
+<f:if condition="{data_tx_corporatetemplate_portfolioitems}">
+  <f:for each="{data_tx_corporatetemplate_portfolioitems}" as="data_item" iteration="portfolioItems">
+    
+    <!-- portfolio item - detals - begin -->
+    <div id="portfolio-{portfolioItems.index}" style="display: none;">
+      <div class="w-arrows">
+        <div class="btn-prev"></div>
+        <div class="close"></div>
+        <div class="btn-next"></div>
+      </div>
+      
+      <div class="img-project">
+        <div class="nav-wrapper">
+          
+          <div class="nav-work">
+            <div class="w-prev"></div>
+            <div class="w-next"></div>
+          </div>
+          
+          <div class="wrapper-project">
+            <!-- imgs - begin -->
+            <ul>
+              <f:if condition="{data_item.data_tx_corporatetemplate_imagesitem}">
+                <f:for each="{data_item.data_tx_corporatetemplate_imagesitem}" as="file">
+                  <li><f:image image="{file}" alt="{file.alternative}" title="{file.title}" /></li>
+                </f:for>
+              </f:if>
+            </ul>
+            <!-- imgs - end -->
+          </div>
+          
+          <div class="controller-3">
+            <ul>
+            </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="info-project">
+          <div class="tag-project">{data_item.data.tx_corporatetemplate_tagsitem}</div>
+          <div class="title-project">{data_item.data.tx_corporatetemplate_fulltitleitem}</div>
+          <div class="spacer"></div>
+          <div class="description"><f:if condition="{data_item.data.tx_corporatetemplate_descriptionitem}"><f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data_item.data.tx_corporatetemplate_descriptionitem}</f:format.html></f:if></div>
+        </div>
+        <div class="clear"></div>
+        <div class="w-arrows last">
+          <div class="btn-prev"></div>
+          <div class="close"></div>
+          <div class="btn-next"></div>
+        </div>
+      </div>
+    </div> <!-- end of portfolio -->
+    <!-- portfolio item - detals - end -->
+    
+  </f:for>
+</f:if>

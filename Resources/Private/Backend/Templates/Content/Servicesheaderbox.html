@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="corporate-template-preview">
+    <f:if condition="{processedRow.tx_corporatetemplate_servicestitle}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_servicestitle" />:</strong> {processedRow.tx_corporatetemplate_servicestitle}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_servicetexttop}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_servicetexttop" />:</strong> {processedRow.tx_corporatetemplate_servicetexttop}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_servicebox}">
+        <div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_servicebox" /></strong> ({processedRow.tx_corporatetemplate_servicebox -> f:count()})</div>
+        <ul class="mb-1">
+            <f:for each="{processedRow.tx_corporatetemplate_servicebox}" as="item1">
+                <li class="{f:if(condition: item1.hidden, then: 'text-body-secondary text-decoration-line-through')}">
+                    <f:if condition="{item1.tx_corporatetemplate_servicemaintitle}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_servicebox.tx_corporatetemplate_servicemaintitle" />:</strong> {item1.tx_corporatetemplate_servicemaintitle}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_serviceicon}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_servicebox.tx_corporatetemplate_serviceicon" />:</strong> {item1.tx_corporatetemplate_serviceicon}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_servicessubnamesbox}">
+                        <div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_servicebox.tx_corporatetemplate_servicessubnamesbox" /></strong> ({item1.tx_corporatetemplate_servicessubnamesbox -> f:count()})</div>
+                        <ul class="mb-1">
+                            <f:for each="{item1.tx_corporatetemplate_servicessubnamesbox}" as="item5">
+                                <li class="{f:if(condition: item5.hidden, then: 'text-body-secondary text-decoration-line-through')}">
+                                    <f:if condition="{item5.tx_corporatetemplate_servicename}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_servicessubnamesbox.tx_corporatetemplate_servicename" />:</strong> {item5.tx_corporatetemplate_servicename}</div></f:if>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</div>
+</html>

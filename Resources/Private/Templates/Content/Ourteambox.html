@@ -1,0 +1,50 @@
+<article id="menu3" class="content dark team">
+  <header class="title one">{data.tx_corporatetemplate_teamtitle}</header>
+  <div class="spacer"></div>
+  <div class="title two">{data.tx_corporatetemplate_teamsubtitle}</div>
+  <section class="team-box">
+    <div class="s-container team-grid">
+      <div class="t-list">
+        
+        <f:if condition="{data_tx_corporatetemplate_businesscard}">
+          <f:for each="{data_tx_corporatetemplate_businesscard}" as="data_item"> 
+            <div class="t-element dontHide">
+              
+              <div class="t-photo">
+                <div class="image-hover-overlay"></div>
+                <span class="f-category"></span> 
+                <f:if condition="{data_item.data.tx_corporatetemplate_peopelemail}">
+                  <a href="mailto:{data_item.data.tx_corporatetemplate_peopelemail}"><div class="portfolio-meta">
+                    <div>{data_item.data.tx_corporatetemplate_peopleemailleft}@<br />{data_item.data.tx_corporatetemplate_peopleemailright}</div>
+                  </div></a> 
+                </f:if>   
+                <f:if condition="{data_item.data_tx_corporatetemplate_peopleimg}">
+                  <f:for each="{data_item.data_tx_corporatetemplate_peopleimg}" as="file">
+                    <f:image image="{file}" alt="{file.alternative}" title="{file.title}" />
+                  </f:for>
+                </f:if>
+              </div>
+              
+              <div class="t-data">
+                <div class="t-name">{data_item.data.tx_corporatetemplate_peoplename}</div>
+                <div class="t-info">{data_item.data.tx_corporatetemplate_peopleposition}</div>
+                <div class="t-spacer"></div>
+                <div class="t-social">
+                  <div class="in-social">    
+                    <f:if condition="{data_item.data.tx_corporatetemplate_sociallink1}"><f:link.external uri="{data_item.data.tx_corporatetemplate_sociallink1}" class="ts facebook" target="_blank"></f:link.external></f:if>
+                    <f:if condition="{data_item.data.tx_corporatetemplate_sociallink2}"><f:link.external uri="{data_item.data.tx_corporatetemplate_sociallink2}" class="ts twitter" target="_blank"></f:link.external></f:if>
+                    <f:if condition="{data_item.data.tx_corporatetemplate_sociallink3}"><f:link.external uri="{data_item.data.tx_corporatetemplate_sociallink3}" class="ts tumblr" target="_blank"></f:link.external></f:if>
+                  </div>
+                </div>
+              </div> 
+              
+            </div>
+          </f:for>     
+        </f:if>
+        
+      </div>
+    </div>
+  </section>
+  <div class="clearfix"></div>
+</article>
+<hr>

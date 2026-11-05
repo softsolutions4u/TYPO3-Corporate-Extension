@@ -1,0 +1,64 @@
+<div id="menu1"></div>
+<div id="slides">
+    <div class="overlay"></div>
+    <ul class="slides-container"></ul>
+</div>
+<div id='slider-img'>
+    <f:format.raw>{imageslider}</f:format.raw>
+    <f:if condition="{data_tx_corporatetemplate_bannerimagesbox}">
+        <f:for each="{data_tx_corporatetemplate_bannerimagesbox}" as="data_item">
+            <f:if condition="{data_item.data_tx_corporatetemplate_bannerimage}">
+                <f:for each="{data_item.data_tx_corporatetemplate_bannerimage}" as="file">
+                    <f:image image="{file}" alt="{file.alternative}"
+                        title="{file.title}" />
+                </f:for>
+            </f:if>
+        </f:for>
+    </f:if>
+    <f:if condition="{data_tx_corporatetemplate_bannerimagesbox}">
+        <div class="slider-wrapper theme-default">
+            <div class="ribbon"></div>
+            <div id="t3s-headerslider" class="nivoSlider center-block m-x-auto"
+                style="height: auto; max-width: 1920px;">
+                <f:for each="{data_tx_corporatetemplate_bannerimagesbox}" as="data_item">
+                    <f:if condition="{data_item.data_tx_corporatetemplate_bannerimage}">
+                        <f:for each="{data_item.data_tx_corporatetemplate_bannerimage}" as="file">
+                            <f:image image="{file}" alt="{file.alternative}"
+                                title="{file.title}" />
+                        </f:for>
+                    </f:if>
+                </f:for>
+            </div>
+        </div>
+    </f:if>
+</div>
+<div class="main-title">
+    <div class="title-container">
+        <div class="welcome">{data.tx_corporatetemplate_bannertitle}</div>
+        <f:if condition="{data_tx_corporatetemplate_bannertitlesbox}">
+            <ul>
+                <f:for each="{data_tx_corporatetemplate_bannertitlesbox}" as="data_item"
+                    iteration="bannerTitles">
+                    <f:if condition="{bannerTitles.index} == 0">
+                        <f:then>
+                            <li class="t-current"><f:if
+                                    condition="{data_item.data.tx_corporatetemplate_bannertitle}">{data_item.data.tx_corporatetemplate_bannertitle}</f:if></li>
+                        </f:then>
+                        <f:else>
+                            <li><f:if
+                                    condition="{data_item.data.tx_corporatetemplate_bannertitle}">{data_item.data.tx_corporatetemplate_bannertitle}</f:if></li>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </ul>
+        </f:if>
+        <div class="second-title">
+            <h1>{data.tx_corporatetemplate_bannersubtitle}</h1>
+        </div>
+        <a href="#anchor3">
+            <div class="buy-logo">
+                {data.tx_corporatetemplate_bannerbutton} <span></span>
+            </div>
+        </a>
+    </div>
+</div>

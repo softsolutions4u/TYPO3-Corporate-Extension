@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2018-12-26UTC05:22:550">
+        <header>
+            <authorName>Sharmistha</authorName>
+            <authorEmail>sharmistha@softsolutions4u.com</authorEmail>
+        </header>
+        <body>
+      <trans-unit id="tx_corporatetemplate_bannerimagesbox" xml:space="preserve">
+        <source>tx_corporatetemplate_bannerimagesbox</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_bannerimagesbox.tx_corporatetemplate_bannerimage" xml:space="preserve">
+        <source>Banner Image</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_bannertitlesbox" xml:space="preserve">
+        <source>tx_corporatetemplate_bannertitlesbox</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_bannertitlesbox.tx_corporatetemplate_bannertitle" xml:space="preserve">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard" xml:space="preserve">
+        <source>tx_corporatetemplate_businesscard</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard.tx_corporatetemplate_peopelemail" xml:space="preserve">
+        <source>Email</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard.tx_corporatetemplate_peopleemailleft" xml:space="preserve">
+        <source>Email LeftPart</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard.tx_corporatetemplate_peopleemailright" xml:space="preserve">
+        <source>Email RightPart</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard.tx_corporatetemplate_peopleimg" xml:space="preserve">
+        <source>Picture</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard.tx_corporatetemplate_peoplename" xml:space="preserve">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard.tx_corporatetemplate_peopleposition" xml:space="preserve">
+        <source>Position</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard.tx_corporatetemplate_sociallink1" xml:space="preserve">
+        <source>Social Link 1</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard.tx_corporatetemplate_sociallink2" xml:space="preserve">
+        <source>Social Link 2</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_businesscard.tx_corporatetemplate_sociallink3" xml:space="preserve">
+        <source>Social Link 3</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_categoriesbox" xml:space="preserve">
+        <source>tx_corporatetemplate_categoriesbox</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_categoriesbox.tx_corporatetemplate_filtername" xml:space="preserve">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_categoriesbox.tx_corporatetemplate_filtervalue" xml:space="preserve">
+        <source>Value</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_categoriesitem" xml:space="preserve">
+        <source>tx_corporatetemplate_categoriesitem</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_categoriesitem.tx_corporatetemplate_categorynameitem" xml:space="preserve">
+        <source>Category Name</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_categoriesitem.tx_corporatetemplate_categoryvalueitem" xml:space="preserve">
+        <source>Category Value</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_clientsboxmain" xml:space="preserve">
+        <source>tx_corporatetemplate_clientsboxmain</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client1comment" xml:space="preserve">
+        <source> Client 1 Comment</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client1img" xml:space="preserve">
+        <source>Client 1 Image</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client1name" xml:space="preserve">
+        <source>Client 1 Name</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client1position" xml:space="preserve">
+        <source> Client 1 Position</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client2comment" xml:space="preserve">
+        <source>Client 2 Comment</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client2img" xml:space="preserve">
+        <source>Client 2 Image</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client2name" xml:space="preserve">
+        <source>Client 2 Name</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client2position" xml:space="preserve">
+        <source>Client 2 Position</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_portfolioitems" xml:space="preserve">
+        <source>tx_corporatetemplate_portfolioitems</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_portfolioitems.tx_corporatetemplate_categoriesitem" xml:space="preserve">
+        <source>Category</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_portfolioitems.tx_corporatetemplate_descriptionitem" xml:space="preserve">
+        <source>Description</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_portfolioitems.tx_corporatetemplate_fulltitleitem" xml:space="preserve">
+        <source>Full Title</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_portfolioitems.tx_corporatetemplate_imagesitem" xml:space="preserve">
+        <source>Images</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_portfolioitems.tx_corporatetemplate_shorttitleitem" xml:space="preserve">
+        <source>Short Title</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_portfolioitems.tx_corporatetemplate_tagsitem" xml:space="preserve">
+        <source>Tags</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_portfolioitems.tx_corporatetemplate_thumbnailimage" xml:space="preserve">
+        <source>Thumbnail Image</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_servicebox" xml:space="preserve">
+        <source>tx_corporatetemplate_servicebox</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_servicebox.tx_corporatetemplate_serviceicon" xml:space="preserve">
+        <source>Icon</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_servicebox.tx_corporatetemplate_servicemaintitle" xml:space="preserve">
+        <source>Service Main Title</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_servicebox.tx_corporatetemplate_servicessubnamesbox" xml:space="preserve">
+        <source>Services Box</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_servicessubnamesbox" xml:space="preserve">
+        <source>tx_corporatetemplate_servicessubnamesbox</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_servicessubnamesbox.tx_corporatetemplate_servicename" xml:space="preserve">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_skillnamebox" xml:space="preserve">
+        <source>tx_corporatetemplate_skillnamebox</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_skillnamebox.tx_corporatetemplate_skillname" xml:space="preserve">
+        <source>Skill name</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_skillnamebox.tx_corporatetemplate_skillvalue" xml:space="preserve">
+        <source>skillname</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_skillsbox" xml:space="preserve">
+        <source>tx_corporatetemplate_skillsbox</source>
+      </trans-unit>
+      <trans-unit id="tx_corporatetemplate_twoclientsbox" xml:space="preserve">
+        <source>tx_corporatetemplate_twoclientsbox</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_bannerbutton" xml:space="preserve">
+        <source>Button Label</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_bannerimagesbox" xml:space="preserve">
+        <source>Images Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_bannersubtitle" xml:space="preserve">
+        <source>Subtitle</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_bannertitle" xml:space="preserve">
+        <source>Main Title</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_bannertitlesbox" xml:space="preserve">
+        <source>Titles</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_businesscard" xml:space="preserve">
+        <source>Business Card</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_categoriesbox" xml:space="preserve">
+        <source>Category</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_clientsboxmain" xml:space="preserve">
+        <source>2-Clients Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_clientstitleone" xml:space="preserve">
+        <source>Title One</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_clientstitletwo" xml:space="preserve">
+        <source>Title Two</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_contactheadertextbottom" xml:space="preserve">
+        <source>Text Bottom</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_contactheadertexttop" xml:space="preserve">
+        <source> Text Top</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_contactheadertitle" xml:space="preserve">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_contacttitlebottom" xml:space="preserve">
+        <source>Contact title two</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_contacttitlehoursone" xml:space="preserve">
+        <source>Contact Title One</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_contacttitlehourstwo" xml:space="preserve">
+        <source> Contact Title Two</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_contacttitleone" xml:space="preserve">
+        <source>Contact Title One</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_contacttitletop" xml:space="preserve">
+        <source> Contact title one</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_contacttitletwo" xml:space="preserve">
+        <source>Contact Title Two</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_logo" xml:space="preserve">
+        <source>Logo</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_logotext" xml:space="preserve">
+        <source>Logo Text</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_portfolioitems" xml:space="preserve">
+        <source> Portfolio Item</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_portfoliosubtitle" xml:space="preserve">
+        <source> Main SubTitle</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_portfoliotitle" xml:space="preserve">
+        <source>Main Title</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row1hoursleft" xml:space="preserve">
+        <source>Row 1 Left</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row1hoursright" xml:space="preserve">
+        <source>Row 1 Right</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row1left" xml:space="preserve">
+        <source>Row 1 Left</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row1right" xml:space="preserve">
+        <source>Row 1 Right</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row2hoursleft" xml:space="preserve">
+        <source> Row 2 Left</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row2hoursright" xml:space="preserve">
+        <source>Row 2 Right</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row2left" xml:space="preserve">
+        <source>Row 2 Left</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row2right" xml:space="preserve">
+        <source>Row 2 Right</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row3hoursleft" xml:space="preserve">
+        <source>Row 3 Left</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row3hoursright" xml:space="preserve">
+        <source>Row 3 Right</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row3left" xml:space="preserve">
+        <source>Row 3 Left</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_row3right" xml:space="preserve">
+        <source>Row 3 Right</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_servicebox" xml:space="preserve">
+        <source>Service Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_servicestitle" xml:space="preserve">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_servicetexttop" xml:space="preserve">
+        <source>servicestitle</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_skillnamebox" xml:space="preserve">
+        <source>Skill name box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_teamsubtitle" xml:space="preserve">
+        <source>Subtitle</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_corporatetemplate_teamtitle" xml:space="preserve">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.div._corporatetemplate_" xml:space="preserve">
+        <source>corporate_template</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_bannerslider" xml:space="preserve">
+        <source>Banner Slider</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_clientsbox" xml:space="preserve">
+        <source>Clients Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_contactbox" xml:space="preserve">
+        <source>Contact Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_contactheadbox" xml:space="preserve">
+        <source>Contact Header Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_contacthours" xml:space="preserve">
+        <source>Contact Hours</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_homelogo" xml:space="preserve">
+        <source>Logo</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_ourteambox" xml:space="preserve">
+        <source>Our Team Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_portfoliobox" xml:space="preserve">
+        <source>Portfolio Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_servicesheaderbox" xml:space="preserve">
+        <source>Services Header Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.corporatetemplate_skillsbox" xml:space="preserve">
+        <source>Skills Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.l10n_source" xml:space="preserve">
+        <source>l10n_source</source>
+      </trans-unit>
+      <trans-unit id="tt_content.l18n_diffsource" xml:space="preserve">
+        <source>l18n_diffsource</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_impexp_origuid" xml:space="preserve">
+        <source>tx_impexp_origuid</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.29" xml:space="preserve">
+        <source>Form</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.31" xml:space="preserve">
+        <source>Banner Slider</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.32" xml:space="preserve">
+        <source>Clients Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.33" xml:space="preserve">
+        <source>Contact Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.34" xml:space="preserve">
+        <source>Contact Header Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.35" xml:space="preserve">
+        <source>Contact Hours</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.36" xml:space="preserve">
+        <source>Logo</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.37" xml:space="preserve">
+        <source>Our Team Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.38" xml:space="preserve">
+        <source>Portfolio Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.39" xml:space="preserve">
+        <source>Services Header Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.I.40" xml:space="preserve">
+        <source>Skills Box</source>
+      </trans-unit>
+      <trans-unit id="tt_content.imagecols.I.0" xml:space="preserve">
+        <source>1</source>
+      </trans-unit>
+      <trans-unit id="tt_content.imagecols.I.1" xml:space="preserve">
+        <source>2</source>
+      </trans-unit>
+      <trans-unit id="tt_content.imagecols.I.2" xml:space="preserve">
+        <source>3</source>
+      </trans-unit>
+      <trans-unit id="tt_content.imagecols.I.3" xml:space="preserve">
+        <source>4</source>
+      </trans-unit>
+      <trans-unit id="tt_content.imagecols.I.4" xml:space="preserve">
+        <source>5</source>
+      </trans-unit>
+      <trans-unit id="tt_content.imagecols.I.5" xml:space="preserve">
+        <source>6</source>
+      </trans-unit>
+      <trans-unit id="tt_content.imagecols.I.6" xml:space="preserve">
+        <source>7</source>
+      </trans-unit>
+      <trans-unit id="tt_content.imagecols.I.7" xml:space="preserve">
+        <source>8</source>
+      </trans-unit>
+      <trans-unit id="tt_content.cols.I.1" xml:space="preserve">
+        <source>1</source>
+      </trans-unit>
+      <trans-unit id="tt_content.cols.I.2" xml:space="preserve">
+        <source>2</source>
+      </trans-unit>
+      <trans-unit id="tt_content.cols.I.3" xml:space="preserve">
+        <source>3</source>
+      </trans-unit>
+      <trans-unit id="tt_content.cols.I.4" xml:space="preserve">
+        <source>4</source>
+      </trans-unit>
+      <trans-unit id="tt_content.cols.I.5" xml:space="preserve">
+        <source>5</source>
+      </trans-unit>
+      <trans-unit id="tt_content.cols.I.6" xml:space="preserve">
+        <source>6</source>
+      </trans-unit>
+      <trans-unit id="tt_content.cols.I.7" xml:space="preserve">
+        <source>7</source>
+      </trans-unit>
+      <trans-unit id="tt_content.cols.I.8" xml:space="preserve">
+        <source>8</source>
+      </trans-unit>
+      <trans-unit id="tt_content.cols.I.9" xml:space="preserve">
+        <source>9</source>
+      </trans-unit>
+      <trans-unit id="tt_content.list_type.I.1" xml:space="preserve">
+        <source>Google Map</source>
+      </trans-unit>
+      <trans-unit id="tt_content.list_type.I.2" xml:space="preserve">
+        <source>Powermail</source>
+      </trans-unit>
+      <trans-unit id="tt_content.list_type.I.3" xml:space="preserve">
+        <source>Powermail_Frontend</source>
+      </trans-unit>
+    </body>
+    </file>
+</xliff>

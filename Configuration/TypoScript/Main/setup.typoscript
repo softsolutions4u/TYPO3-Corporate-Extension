@@ -1,0 +1,374 @@
+################################################
+#### CONTENT ELEMENTS (corporatetemplate_*) ####
+################################################
+# Shared rendering definition. The elements render without the
+# fluid_styled_content frame on purpose: the CSS/JS of the template
+# expects exactly this markup.
+lib.corporateTemplateContentElement = FLUIDTEMPLATE
+lib.corporateTemplateContentElement {
+    templateRootPaths {
+        0 = EXT:corporate_template/Resources/Private/Templates/Content/
+        10 = {$plugin.tx_corporatetemplate.view.templateRootPath}
+    }
+    partialRootPaths {
+        0 = EXT:corporate_template/Resources/Private/Partials/
+        10 = {$plugin.tx_corporatetemplate.view.partialRootPath}
+    }
+    layoutRootPaths {
+        0 = EXT:corporate_template/Resources/Private/Layouts/
+        10 = {$plugin.tx_corporatetemplate.view.layoutRootPath}
+    }
+    settings {
+        homePageUid = {$plugin.tx_corporatetemplate.settings.homePageUid}
+    }
+}
+
+# Inline child records of the template are stored with "parentid" (uid of the
+# parent record) and "parenttable". Hidden/deleted/time restricted records and
+# translations are handled by the DatabaseQueryProcessor automatically.
+
+tt_content.corporatetemplate_bannerslider =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_bannerslider {
+    templateName = Bannerslider
+    dataProcessing {
+        10 = database-query
+        10 {
+            if.isTrue.field = tx_corporatetemplate_bannertitlesbox
+            table = tx_corporatetemplate_bannertitlesbox
+            pidInList.field = pid
+            where = {#parentid}=###uid###
+            orderBy = sorting
+            markers.uid.field = uid
+            as = data_tx_corporatetemplate_bannertitlesbox
+        }
+        20 = database-query
+        20 {
+            if.isTrue.field = tx_corporatetemplate_bannerimagesbox
+            table = tx_corporatetemplate_bannerimagesbox
+            pidInList.field = pid
+            where = {#parentid}=###uid###
+            orderBy = sorting
+            markers.uid.field = uid
+            as = data_tx_corporatetemplate_bannerimagesbox
+            dataProcessing {
+                10 = files
+                10 {
+                    references.fieldName = tx_corporatetemplate_bannerimage
+                    references.table = tx_corporatetemplate_bannerimagesbox
+                    as = data_tx_corporatetemplate_bannerimage
+                }
+            }
+        }
+    }
+}
+
+tt_content.corporatetemplate_clientsbox =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_clientsbox {
+    templateName = Clientsbox
+    dataProcessing {
+        10 = database-query
+        10 {
+            if.isTrue.field = tx_corporatetemplate_clientsboxmain
+            table = tx_corporatetemplate_clientsboxmain
+            pidInList.field = pid
+            where = {#parentid}=###uid###
+            orderBy = sorting
+            markers.uid.field = uid
+            as = data_tx_corporatetemplate_clientsboxmain
+            dataProcessing {
+                10 = files
+                10 {
+                    references.fieldName = tx_corporatetemplate_client1img
+                    references.table = tx_corporatetemplate_clientsboxmain
+                    as = data_tx_corporatetemplate_client1img
+                }
+                20 = files
+                20 {
+                    references.fieldName = tx_corporatetemplate_client2img
+                    references.table = tx_corporatetemplate_clientsboxmain
+                    as = data_tx_corporatetemplate_client2img
+                }
+            }
+        }
+    }
+}
+
+tt_content.corporatetemplate_contactbox =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_contactbox.templateName = Contactbox
+
+tt_content.corporatetemplate_contactheadbox =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_contactheadbox.templateName = Contactheadbox
+
+tt_content.corporatetemplate_contacthours =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_contacthours.templateName = Contacthours
+
+tt_content.corporatetemplate_homelogo =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_homelogo {
+    templateName = Homelogo
+    dataProcessing {
+        10 = files
+        10 {
+            references.fieldName = tx_corporatetemplate_logo
+            references.table = tt_content
+            as = data_tx_corporatetemplate_logo
+        }
+    }
+}
+
+tt_content.corporatetemplate_ourteambox =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_ourteambox {
+    templateName = Ourteambox
+    dataProcessing {
+        10 = database-query
+        10 {
+            if.isTrue.field = tx_corporatetemplate_businesscard
+            table = tx_corporatetemplate_businesscard
+            pidInList.field = pid
+            where = {#parentid}=###uid###
+            orderBy = sorting
+            markers.uid.field = uid
+            as = data_tx_corporatetemplate_businesscard
+            dataProcessing {
+                10 = files
+                10 {
+                    references.fieldName = tx_corporatetemplate_peopleimg
+                    references.table = tx_corporatetemplate_businesscard
+                    as = data_tx_corporatetemplate_peopleimg
+                }
+            }
+        }
+    }
+}
+
+tt_content.corporatetemplate_portfoliobox =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_portfoliobox {
+    templateName = Portfoliobox
+    dataProcessing {
+        10 = database-query
+        10 {
+            if.isTrue.field = tx_corporatetemplate_categoriesbox
+            table = tx_corporatetemplate_categoriesbox
+            pidInList.field = pid
+            where = {#parentid}=###uid###
+            orderBy = sorting
+            markers.uid.field = uid
+            as = data_tx_corporatetemplate_categoriesbox
+        }
+        20 = database-query
+        20 {
+            if.isTrue.field = tx_corporatetemplate_portfolioitems
+            table = tx_corporatetemplate_portfolioitems
+            pidInList.field = pid
+            where = {#parentid}=###uid###
+            orderBy = sorting
+            markers.uid.field = uid
+            as = data_tx_corporatetemplate_portfolioitems
+            dataProcessing {
+                10 = database-query
+                10 {
+                    if.isTrue.field = tx_corporatetemplate_categoriesitem
+                    table = tx_corporatetemplate_categoriesitem
+                    pidInList.field = pid
+                    where = {#parentid}=###uid###
+                    orderBy = sorting
+                    markers.uid.field = uid
+                    as = data_tx_corporatetemplate_categoriesitem
+                }
+                20 = files
+                20 {
+                    references.fieldName = tx_corporatetemplate_imagesitem
+                    references.table = tx_corporatetemplate_portfolioitems
+                    as = data_tx_corporatetemplate_imagesitem
+                }
+                30 = files
+                30 {
+                    references.fieldName = tx_corporatetemplate_thumbnailimage
+                    references.table = tx_corporatetemplate_portfolioitems
+                    as = data_tx_corporatetemplate_thumbnailimage
+                }
+            }
+        }
+    }
+}
+
+tt_content.corporatetemplate_servicesheaderbox =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_servicesheaderbox {
+    templateName = Servicesheaderbox
+    dataProcessing {
+        10 = database-query
+        10 {
+            if.isTrue.field = tx_corporatetemplate_servicebox
+            table = tx_corporatetemplate_servicebox
+            pidInList.field = pid
+            where = {#parentid}=###uid###
+            orderBy = sorting
+            markers.uid.field = uid
+            as = data_tx_corporatetemplate_servicebox
+            dataProcessing {
+                10 = database-query
+                10 {
+                    if.isTrue.field = tx_corporatetemplate_servicessubnamesbox
+                    table = tx_corporatetemplate_servicessubnamesbox
+                    pidInList.field = pid
+                    where = {#parentid}=###uid###
+                    orderBy = sorting
+                    markers.uid.field = uid
+                    as = data_tx_corporatetemplate_servicessubnamesbox
+                }
+            }
+        }
+    }
+}
+
+tt_content.corporatetemplate_skillsbox =< lib.corporateTemplateContentElement
+tt_content.corporatetemplate_skillsbox {
+    templateName = Skillsbox
+    dataProcessing {
+        10 = database-query
+        10 {
+            if.isTrue.field = tx_corporatetemplate_skillnamebox
+            table = tx_corporatetemplate_skillnamebox
+            pidInList.field = pid
+            where = {#parentid}=###uid###
+            orderBy = sorting
+            markers.uid.field = uid
+            as = data_tx_corporatetemplate_skillnamebox
+        }
+    }
+}
+
+
+################
+#### HELPER ####
+################
+@import 'EXT:corporate_template/Configuration/TypoScript/Main/Helper/DynamicContent.typoscript'
+
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = EXT:corporate_template/Resources/Public/Icons/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        # The template name is derived from the backend layout of the page:
+        # pagets__home -> Home.html, pagets__normal -> Normal.html, none -> Default.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        templateRootPaths {
+            0 = EXT:corporate_template/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:corporate_template/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:corporate_template/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        settings {
+            homePageUid = {$plugin.tx_corporatetemplate.settings.homePageUid}
+        }
+        dataProcessing {
+            10 = files
+            10 {
+                references.fieldName = media
+                references.table = pages
+            }
+            20 = menu
+            20 {
+                levels = 2
+                includeSpacer = 1
+                as = mainnavigation
+            }
+            # Replaces the old HMENU "special = language" (lib.languageMenu).
+            # Languages and their labels (EN, DE, ...) come from the site configuration.
+            30 = language-menu
+            30 {
+                languages = auto
+                as = languageNavigation
+            }
+        }
+    }
+
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description = {$page.meta.description}
+        description {
+            override.field = description
+        }
+        author = {$page.meta.author}
+        author {
+            override.field = author
+        }
+        keywords = {$page.meta.keywords}
+        keywords {
+            override.field = keywords
+        }
+    }
+
+    includeCSS {
+        corporate_template_layout = EXT:corporate_template/Resources/Public/Css/layout.css
+        isotope = EXT:corporate_template/Resources/Public/Css/isotope.css
+    }
+
+    includeJSFooterlibs {
+        jquery = https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
+        jquery.external = 1
+    }
+
+    includeJSFooter {
+        corporate_template_scripts = EXT:corporate_template/Resources/Public/JavaScript/Src/main.js
+        superslides = EXT:corporate_template/Resources/Public/JavaScript/jquery.superslides.min.js
+        isotope = EXT:corporate_template/Resources/Public/JavaScript/jquery.isotope.min.js
+        nav = EXT:corporate_template/Resources/Public/JavaScript/jquery.nav.js
+        magnific-popup = EXT:corporate_template/Resources/Public/JavaScript/jquery.magnific-popup.js
+        hoverdir = EXT:corporate_template/Resources/Public/JavaScript/jquery.hoverdir.js
+        portfolio = EXT:corporate_template/Resources/Public/JavaScript/portfolio.js
+    }
+}
+
+
+################
+#### CONFIG ####
+################
+# Language specific settings (sys_language_uid, locale, html lang attribute,
+# linkVars L, ...) are configured in the site configuration since TYPO3 v9.5
+# and must not be set in TypoScript anymore.
+config {
+    no_cache = {$config.no_cache}
+    pageTitleFirst = 1
+    doctype = html5
+    admPanel = {$config.admPanel}
+    debug = 0
+    cache_period = 86400
+    sendCacheHeaders = {$config.sendCacheHeaders}
+    disablePrefixComment = 1
+    headerComment = {$config.headerComment}
+    htmlTag.attributes.class = no-js
+    contentObjectExceptionHandler = 0
+    noScaleUp = 1
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
+}

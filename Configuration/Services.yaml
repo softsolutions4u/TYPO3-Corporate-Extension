@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  CorporateTemplate\CorporateTemplate\:
+    resource: '../Classes/*'
+
+  CorporateTemplate\CorporateTemplate\Preview\ContentPreviewRenderer:
+    public: true
+    shared: false

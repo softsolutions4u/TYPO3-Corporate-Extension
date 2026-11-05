@@ -1,0 +1,76 @@
+##############################
+#### CORPORATE TEMPLATE   ####
+##############################
+plugin.tx_corporatetemplate {
+    view {
+        # cat=corporate template/file; type=string; label=Path to content element templates (override)
+        templateRootPath = EXT:corporate_template/Resources/Private/Templates/Content/
+        # cat=corporate template/file; type=string; label=Path to content element partials (override)
+        partialRootPath = EXT:corporate_template/Resources/Private/Partials/
+        # cat=corporate template/file; type=string; label=Path to content element layouts (override)
+        layoutRootPath = EXT:corporate_template/Resources/Private/Layouts/
+    }
+    settings {
+        # cat=corporate template/basic; type=int+; label=UID of the home page (logo, footer and map content is taken from it)
+        homePageUid = 2
+    }
+}
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:corporate_template/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:corporate_template/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:corporate_template/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+############
+### PAGE ###
+############
+page {
+    fluidtemplate {
+        layoutRootPath = EXT:corporate_template/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:corporate_template/Resources/Private/Partials/Page/
+        templateRootPath = EXT:corporate_template/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+    }
+}
+
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 0
+    admPanel = 0
+    headerComment = build by softsolutions4u.com
+    sendCacheHeaders = 1
+}
+
+
+################
+### PLUGINS ###
+################
+# Only used when EXT:powermail is installed
+plugin.tx_powermail.settings {
+    main {
+        confirmation = 0
+        optin = 0
+        moresteps = 0
+    }
+    misc {
+        ajaxSubmit = 1
+    }
+}

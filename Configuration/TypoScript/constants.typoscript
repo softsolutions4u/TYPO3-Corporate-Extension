@@ -1,0 +1,2 @@
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+@import 'EXT:corporate_template/Configuration/TypoScript/Main/constants.typoscript'

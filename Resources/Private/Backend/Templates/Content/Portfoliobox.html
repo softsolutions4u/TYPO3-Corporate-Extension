@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="corporate-template-preview">
+    <f:if condition="{processedRow.tx_corporatetemplate_portfoliotitle}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_portfoliotitle" />:</strong> {processedRow.tx_corporatetemplate_portfoliotitle}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_portfoliosubtitle}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_portfoliosubtitle" />:</strong> {processedRow.tx_corporatetemplate_portfoliosubtitle}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_categoriesbox}">
+        <div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_categoriesbox" /></strong> ({processedRow.tx_corporatetemplate_categoriesbox -> f:count()})</div>
+        <ul class="mb-1">
+            <f:for each="{processedRow.tx_corporatetemplate_categoriesbox}" as="item1">
+                <li class="{f:if(condition: item1.hidden, then: 'text-body-secondary text-decoration-line-through')}">
+                    <f:if condition="{item1.tx_corporatetemplate_filtername}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_categoriesbox.tx_corporatetemplate_filtername" />:</strong> {item1.tx_corporatetemplate_filtername}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_filtervalue}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_categoriesbox.tx_corporatetemplate_filtervalue" />:</strong> {item1.tx_corporatetemplate_filtervalue}</div></f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_portfolioitems}">
+        <div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_portfolioitems" /></strong> ({processedRow.tx_corporatetemplate_portfolioitems -> f:count()})</div>
+        <ul class="mb-1">
+            <f:for each="{processedRow.tx_corporatetemplate_portfolioitems}" as="item1">
+                <li class="{f:if(condition: item1.hidden, then: 'text-body-secondary text-decoration-line-through')}">
+                    <f:if condition="{item1.tx_corporatetemplate_fulltitleitem}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_portfolioitems.tx_corporatetemplate_fulltitleitem" />:</strong> {item1.tx_corporatetemplate_fulltitleitem}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_shorttitleitem}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_portfolioitems.tx_corporatetemplate_shorttitleitem" />:</strong> {item1.tx_corporatetemplate_shorttitleitem}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_descriptionitem}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_portfolioitems.tx_corporatetemplate_descriptionitem" />:</strong> <f:format.crop maxCharacters="120">{item1.tx_corporatetemplate_descriptionitem -> f:format.stripTags()}</f:format.crop></div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_categoriesitem}">
+                        <div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_portfolioitems.tx_corporatetemplate_categoriesitem" /></strong> ({item1.tx_corporatetemplate_categoriesitem -> f:count()})</div>
+                        <ul class="mb-1">
+                            <f:for each="{item1.tx_corporatetemplate_categoriesitem}" as="item5">
+                                <li class="{f:if(condition: item5.hidden, then: 'text-body-secondary text-decoration-line-through')}">
+                                    <f:if condition="{item5.tx_corporatetemplate_categorynameitem}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_categoriesitem.tx_corporatetemplate_categorynameitem" />:</strong> {item5.tx_corporatetemplate_categorynameitem}</div></f:if>
+                                    <f:if condition="{item5.tx_corporatetemplate_categoryvalueitem}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_categoriesitem.tx_corporatetemplate_categoryvalueitem" />:</strong> {item5.tx_corporatetemplate_categoryvalueitem}</div></f:if>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_tagsitem}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_portfolioitems.tx_corporatetemplate_tagsitem" />:</strong> {item1.tx_corporatetemplate_tagsitem}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_thumbnailimage}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_portfolioitems.tx_corporatetemplate_thumbnailimage" />:</strong>
+                        <f:for each="{item1.tx_corporatetemplate_thumbnailimage}" as="file"><f:image image="{file}" maxWidth="64" maxHeight="64" alt="{file.name}" class="me-1" /></f:for>
+                    </div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_imagesitem}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_portfolioitems.tx_corporatetemplate_imagesitem" />:</strong>
+                        <f:for each="{item1.tx_corporatetemplate_imagesitem}" as="file"><f:image image="{file}" maxWidth="64" maxHeight="64" alt="{file.name}" class="me-1" /></f:for>
+                    </div></f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</div>
+</html>

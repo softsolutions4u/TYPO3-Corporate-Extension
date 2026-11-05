@@ -1,0 +1,21 @@
+<ul class="nav">
+      <f:for each="{mainnavigation}" as="mainnavigationItem">
+          <f:if condition="{mainnavigationItem.children}">
+            <f:then>
+                <li class="nav-item {f:if(condition: mainnavigationItem.active, then:'active')} dropdown">
+                  <a class="nav-link dropdown-toggle" href="#">{mainnavigationItem.title}</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <f:for each="{mainnavigationItem.children}" as="child">
+                         <a class="dropdown-item" href="{child.link}">{child.title}</a>
+                      </f:for>
+                  </div>
+                </li>
+            </f:then>
+            <f:else>
+                <li class="{f:if(condition: mainnavigationItem.active, then:'current')}">
+                  <a href="#{mainnavigationItem.title}">{mainnavigationItem.title}</a>
+                </li>
+            </f:else>
+          </f:if>
+      </f:for>
+</ul>

@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="corporate-template-preview">
+    <f:if condition="{processedRow.tx_corporatetemplate_contacttitletop}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_contacttitletop" />:</strong> {processedRow.tx_corporatetemplate_contacttitletop}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_contacttitlebottom}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_contacttitlebottom" />:</strong> {processedRow.tx_corporatetemplate_contacttitlebottom}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_skillnamebox}">
+        <div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_skillnamebox" /></strong> ({processedRow.tx_corporatetemplate_skillnamebox -> f:count()})</div>
+        <ul class="mb-1">
+            <f:for each="{processedRow.tx_corporatetemplate_skillnamebox}" as="item1">
+                <li class="{f:if(condition: item1.hidden, then: 'text-body-secondary text-decoration-line-through')}">
+                    <f:if condition="{item1.tx_corporatetemplate_skillname}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_skillnamebox.tx_corporatetemplate_skillname" />:</strong> {item1.tx_corporatetemplate_skillname}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_skillvalue}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_skillnamebox.tx_corporatetemplate_skillvalue" />:</strong> {item1.tx_corporatetemplate_skillvalue}</div></f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</div>
+</html>

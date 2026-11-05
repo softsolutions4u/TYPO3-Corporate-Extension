@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="corporate-template-preview">
+    <f:if condition="{processedRow.tx_corporatetemplate_clientstitleone}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_clientstitleone" />:</strong> {processedRow.tx_corporatetemplate_clientstitleone}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_clientstitletwo}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_clientstitletwo" />:</strong> {processedRow.tx_corporatetemplate_clientstitletwo}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_clientsboxmain}">
+        <div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_clientsboxmain" /></strong> ({processedRow.tx_corporatetemplate_clientsboxmain -> f:count()})</div>
+        <ul class="mb-1">
+            <f:for each="{processedRow.tx_corporatetemplate_clientsboxmain}" as="item1">
+                <li class="{f:if(condition: item1.hidden, then: 'text-body-secondary text-decoration-line-through')}">
+                    <f:if condition="{item1.tx_corporatetemplate_client1img}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client1img" />:</strong>
+                        <f:for each="{item1.tx_corporatetemplate_client1img}" as="file"><f:image image="{file}" maxWidth="64" maxHeight="64" alt="{file.name}" class="me-1" /></f:for>
+                    </div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_client1name}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client1name" />:</strong> {item1.tx_corporatetemplate_client1name}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_client1position}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client1position" />:</strong> {item1.tx_corporatetemplate_client1position}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_client1comment}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client1comment" />:</strong> <f:format.crop maxCharacters="120">{item1.tx_corporatetemplate_client1comment -> f:format.stripTags()}</f:format.crop></div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_client2img}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client2img" />:</strong>
+                        <f:for each="{item1.tx_corporatetemplate_client2img}" as="file"><f:image image="{file}" maxWidth="64" maxHeight="64" alt="{file.name}" class="me-1" /></f:for>
+                    </div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_client2name}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client2name" />:</strong> {item1.tx_corporatetemplate_client2name}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_client2position}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client2position" />:</strong> {item1.tx_corporatetemplate_client2position}</div></f:if>
+                    <f:if condition="{item1.tx_corporatetemplate_client2comment}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_clientsboxmain.tx_corporatetemplate_client2comment" />:</strong> <f:format.crop maxCharacters="120">{item1.tx_corporatetemplate_client2comment -> f:format.stripTags()}</f:format.crop></div></f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</div>
+</html>

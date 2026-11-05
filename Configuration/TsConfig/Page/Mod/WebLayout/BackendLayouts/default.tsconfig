@@ -1,0 +1,135 @@
+#
+# BACKENDLAYOUT: HOME
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            home {
+                title = LLL:EXT:corporate_template/Resources/Private/Language/locallang_be.xlf:backend_layout.home
+                config {
+                    backend_layout {
+                        colCount = 3
+                        rowCount = 10
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Logo
+                                        identifier = logo
+                                        colPos = 13
+                                        colspan = 3
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Banner Slider
+                                        identifier = banner-slider
+                                        colPos = 12
+                                        colspan = 3
+                                    }
+                                }
+                            }
+                            3 {
+                                columns {
+                                    1 {
+                                        name = Services Header
+                                        identifier = services-header
+                                        colPos = 8
+                                        colspan = 3
+                                    }
+                                }
+                            }
+                            4 {
+                                columns {
+                                    1 {
+                                        name = Our Skills
+                                        identifier = our-skills
+                                        colPos = 9
+                                    }
+                                                    2 {
+                                        name = Our Clients
+                                        identifier = our-clients
+                                        colPos = 10
+                                        colspan = 2
+                                    }
+                                }
+                            }
+                            5 {
+                                columns {
+                                    1 {
+                                        name = Our Team
+                                        identifier = our-team
+                                        colPos = 11
+                                        colspan = 3
+                                    }
+                                }
+                            }          
+                            6 {
+                                columns {
+                                    1 {
+                                        name = Portfolio
+                                        identifier = portfolio
+                                        colPos = 14
+                                        colspan = 3
+                                    }
+                                }                        
+                            }
+                            7 {
+                                columns {
+                                    1 {
+                                        name = Contact Header
+                                        identifier = contact-header
+                                        colPos = 7
+                                        colspan = 3
+                                    }
+                                }                        
+                            }                
+                            8 {
+                                columns {
+                                    1 {
+                                        name = Contact Address
+                                        identifier = contact-address
+                                        colPos = 4
+                                    }
+                                    2 {
+                                        name = Contact Hours
+                                        identifier = contact-hours
+                                        colPos = 5
+                                    }
+                                    3 {
+                                        name = Contact Form
+                                        identifier = contact-form
+                                        colPos = 6
+                                    }
+
+                                }
+                            }
+                            9 {
+                                columns {
+                                    1 {
+                                        name = Map
+                                        identifier = map
+                                        colPos = 2
+                                        colspan = 3
+                                    }
+                                }
+                            }
+                            10 {
+                                columns {
+                                    1 {
+                                        name = CopyRight
+                                        identifier = copyright
+                                        colPos = 3
+                                        colspan = 3
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

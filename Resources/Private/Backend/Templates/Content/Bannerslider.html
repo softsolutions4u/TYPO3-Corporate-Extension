@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="corporate-template-preview">
+    <f:if condition="{processedRow.tx_corporatetemplate_bannertitle}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_bannertitle" />:</strong> {processedRow.tx_corporatetemplate_bannertitle}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_bannersubtitle}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_bannersubtitle" />:</strong> {processedRow.tx_corporatetemplate_bannersubtitle}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_bannertitlesbox}">
+        <div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_bannertitlesbox" /></strong> ({processedRow.tx_corporatetemplate_bannertitlesbox -> f:count()})</div>
+        <ul class="mb-1">
+            <f:for each="{processedRow.tx_corporatetemplate_bannertitlesbox}" as="item1">
+                <li class="{f:if(condition: item1.hidden, then: 'text-body-secondary text-decoration-line-through')}">
+                    <f:if condition="{item1.tx_corporatetemplate_bannertitle}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_bannertitlesbox.tx_corporatetemplate_bannertitle" />:</strong> {item1.tx_corporatetemplate_bannertitle}</div></f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_bannerbutton}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_bannerbutton" />:</strong> {processedRow.tx_corporatetemplate_bannerbutton}</div></f:if>
+    <f:if condition="{processedRow.tx_corporatetemplate_bannerimagesbox}">
+        <div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tt_content.tx_corporatetemplate_bannerimagesbox" /></strong> ({processedRow.tx_corporatetemplate_bannerimagesbox -> f:count()})</div>
+        <ul class="mb-1">
+            <f:for each="{processedRow.tx_corporatetemplate_bannerimagesbox}" as="item1">
+                <li class="{f:if(condition: item1.hidden, then: 'text-body-secondary text-decoration-line-through')}">
+                    <f:if condition="{item1.tx_corporatetemplate_bannerimage}"><div><strong><f:translate key="LLL:EXT:corporate_template/Resources/Private/Language/locallang_db.xlf:tx_corporatetemplate_bannerimagesbox.tx_corporatetemplate_bannerimage" />:</strong>
+                        <f:for each="{item1.tx_corporatetemplate_bannerimage}" as="file"><f:image image="{file}" maxWidth="64" maxHeight="64" alt="{file.name}" class="me-1" /></f:for>
+                    </div></f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</div>
+</html>

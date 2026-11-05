@@ -1,0 +1,10 @@
+#
+# PageTS for corporate template
+#
+@import 'EXT:corporate_template/Configuration/TsConfig/Page/RTE.tsconfig'
+@import 'EXT:corporate_template/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'
+
+mod.SHARED {
+    defaultLanguageFlag = gb
+    defaultLanguageLabel = English
+}

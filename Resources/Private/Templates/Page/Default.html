@@ -1,0 +1,10 @@
+<f:layout name="Error" />
+<f:comment>
+    Used for pages without a (corporate template) backend layout, e.g. new sub pages.
+    Renders the main column (colPos 0) of the TYPO3 default backend layout.
+</f:comment>
+<f:section name="Main">
+ <div class="error_page">
+  <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+ </div>
+</f:section>

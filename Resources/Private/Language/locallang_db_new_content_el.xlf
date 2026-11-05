@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2019-03-28T11:53:58+05:30" product-name="corporate_template">
+    <header/>
+    <body>
+      <trans-unit id="wizards.newContentElement.bannerslider_title" xml:space="preserve">
+        <source>Banner Slider</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.bannerslider_description" xml:space="preserve">
+        <source>Banner Slider is shown at the top of the page.</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.clientsbox_title" xml:space="preserve">
+        <source>Clients Box</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.clientsbox_description" xml:space="preserve">
+        <source>Clients Box shows our happy clients</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.contactbox_title" xml:space="preserve">
+        <source>Contact Box</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.contactbox_description" xml:space="preserve">
+        <source>Contact box with fields.</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.contactheadbox_title" xml:space="preserve">
+        <source>Contact Header Box</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.contactheadbox_description" xml:space="preserve">
+        <source>This box is above the small contact boxes with the real data. It has only title and text.</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.contacthours_title" xml:space="preserve">
+        <source>Contact Hours</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.contacthours_description" xml:space="preserve">
+        <source>Contact hours with fields.</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.homelogo_title" xml:space="preserve">
+        <source>Logo</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.homelogo_description" xml:space="preserve">
+        <source>Logo</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.ourteambox_title" xml:space="preserve">
+        <source>Our Team Box</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.ourteambox_description" xml:space="preserve">
+        <source>Our Team Box shows business cards of our specialists.</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.portfoliobox_title" xml:space="preserve">
+        <source>Portfolio Box</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.portfoliobox_description" xml:space="preserve">
+        <source>Portfolio Box</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.servicesheaderbox_title" xml:space="preserve">
+        <source>Services Header Box</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.servicesheaderbox_description" xml:space="preserve">
+        <source>Services Header Box shows our services, skill and clients</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.skillsbox_title" xml:space="preserve">
+        <source>Skills Box</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.skillsbox_description" xml:space="preserve">
+        <source>Skills box shows our skills.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

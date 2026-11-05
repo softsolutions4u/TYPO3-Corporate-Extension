@@ -1,0 +1,26 @@
+<div class="half dontHide">
+  <div class="title-one">{data.tx_corporatetemplate_contacttitletop}</div>
+  <div class="title-two">{data.tx_corporatetemplate_contacttitlebottom}</div>
+  <div class="half-content">
+    <div class="sk-container">
+      
+      <f:if condition="{data_tx_corporatetemplate_skillnamebox}">
+        <f:for each="{data_tx_corporatetemplate_skillnamebox}" as="data_item" iteration="skilsItems">
+          
+          <div class="skill-content">
+            <div class="progress-bar skill-{skilsItems.index}">
+              <div class="skill-in" title="{data_item.data.tx_corporatetemplate_skillvalue}">
+                <div class="info-skills">
+                  {data_item.data.tx_corporatetemplate_skillname}
+                  <span>- {data_item.data.tx_corporatetemplate_skillvalue}%</span>
+                </div>   
+              </div>
+            </div>
+          </div>                     
+          
+        </f:for>                                               
+      </f:if>
+      
+    </div>
+  </div>
+</div>

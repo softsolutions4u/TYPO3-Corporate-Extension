@@ -1,0 +1,7 @@
+/* Styles used inside the rich text editor (preset "corporate_template") */
+body { font-family: "Open Sans", Arial, sans-serif; font-size: 14px; line-height: 1.6; }
+p.lead { font-size: 1.25em; font-weight: 300; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }

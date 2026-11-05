@@ -1,0 +1,4 @@
+name: corporate-template/site
+label: 'Corporate Template'
+dependencies:
+  - typo3/fluid-styled-content

@@ -1,0 +1,11 @@
+<div class="logo" id="logo">
+<a href="{f:uri.page(pageUid: settings.homePageUid)}">
+<f:if condition="{data_tx_corporatetemplate_logo}">
+    <f:for each="{data_tx_corporatetemplate_logo}" as="file">
+        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" />
+    </f:for>
+</f:if>
+<span>{data.tx_corporatetemplate_logotext}</span>
+</a>
+</div>
+

@@ -1,0 +1,37 @@
+<div class="clear"></div>
+<article id="anchor3" class="content dark">
+ <header class="title one">{data.tx_corporatetemplate_servicestitle}</header>
+ <div class="spacer"></div>
+ <div class="title two">{data.tx_corporatetemplate_servicetexttop}</div>
+ <div class="s-container services-container">
+  <div class="services">
+        
+   <f:if condition="{data_tx_corporatetemplate_servicebox}">
+    <f:for each="{data_tx_corporatetemplate_servicebox}" as="data_item" iteration="serviceItem">
+     
+      <div class="sl-element dontHide">
+       <div class="sl-ico sl-{data_item.data.tx_corporatetemplate_serviceicon}"></div> 
+        <div class="sl-title">{data_item.data.tx_corporatetemplate_servicemaintitle}</div>
+        
+        <f:if condition="{data_item.data_tx_corporatetemplate_servicessubnamesbox}">
+        <div class="tooltip s-roll">
+         <div class="details">
+          <ul class="feature-list">
+           <f:for each="{data_item.data_tx_corporatetemplate_servicessubnamesbox}" as="data_item_data_item">
+           <li><span class="list-dot"></span>{data_item_data_item.data.tx_corporatetemplate_servicename}</li>
+           </f:for>
+          </ul>
+         </div>
+        </div> 
+        </f:if>
+        
+       <span class="arrow-down s-roll"></span>
+      </div>  
+      
+    </f:for>
+   </f:if> 
+        
+   <div class="clear"></div>
+  </div>
+ </div>
+</article>

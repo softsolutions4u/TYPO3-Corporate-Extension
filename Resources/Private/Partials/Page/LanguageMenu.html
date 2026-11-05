@@ -1,0 +1,5 @@
+<f:for each="{languageNavigation}" as="language">
+    <f:if condition="{language.available}">
+        <li><a href="{language.link}" hreflang="{language.hreflang}" class="{f:if(condition: language.active, then: 'active')}">{language.navigationTitle}</a></li>
+    </f:if>
+</f:for>
