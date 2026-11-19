@@ -1,4 +1,8 @@
-# Corporate Template – Installation Guide
+# Corporate Template
+One-page responsive TYPO3 template for small businesses, corporates and startups.
+
+
+# Installation Guide
 
 ## 1. Overview
 
@@ -50,7 +54,9 @@ corporate_template/
 ├── composer.json
 ├── ext_emconf.php
 ├── ext_localconf.php
-└── ext_tables.php
+├── ext_tables.php
+├──ext_tables_static+adt.sql
+└──ext_tables.sql
 ```
 
 ## 4. Install Corporate Template
