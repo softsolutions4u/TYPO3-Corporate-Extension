@@ -388,7 +388,19 @@ Corporate Template installation is complete when:
 ---
 
 ## Authors
-Developed and maintained by SoftSolutions4U:
+Developed and maintained by **[SoftSolutions4U](https://www.softsolutions4u.com/)**:
 
-Logesh (Developer)
-ManiMaran (QA)
+- Logesh (Developer)
+- ManiMaran (QA)
+
+---
+
+## Support
+
+- Bug reports and feature requests: [Open an issue on GitHub](https://github.com/softsolutions4u/TYPO3-Corporate-Extension) to report bugs, suggest improvements, or request features.
+- Commercial support and custom OroCommerce development: [Soft Solutions4U](https://www.softsolutions4u.com/) provides professional assistance for businesses using OroCommerce, including installation and configuration, invoice workflow customization, B2B eCommerce development, and ERP or third-party integrations.
+- Contact us: <info@softsolutions4u.com>
+
+The extension is available free of charge under the license specified in
+this repository. Commercial support and custom development services are
+available separately.
