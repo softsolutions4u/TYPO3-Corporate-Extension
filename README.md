@@ -397,7 +397,7 @@ Developed and maintained by **[SoftSolutions4U](https://www.softsolutions4u.com/
 
 ## Support
 
-- Bug reports and feature requests: [Open an issue on GitHub](https://github.com/softsolutions4u/TYPO3-Corporate-Extension) to report bugs, suggest improvements, or request features.
+- Bug reports and feature requests: [Open an issue on GitHub](https://github.com/softsolutions4u/TYPO3-Corporate-Extension/issues) to report bugs, suggest improvements, or request features.
 - Commercial support and custom OroCommerce development: [Soft Solutions4U](https://www.softsolutions4u.com/) provides professional assistance for businesses using OroCommerce, including installation and configuration, invoice workflow customization, B2B eCommerce development, and ERP or third-party integrations.
 - Contact us: <info@softsolutions4u.com>
 
