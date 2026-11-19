@@ -387,4 +387,8 @@ Corporate Template installation is complete when:
 
 ---
 
-**End of Installation Guide**
+## Authors
+Developed and maintained by SoftSolutions4U:
+
+Logesh (Developer)
+ManiMaran (QA)
