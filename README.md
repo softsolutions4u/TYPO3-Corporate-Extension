@@ -2,7 +2,19 @@
 One-page responsive TYPO3 template for small businesses, corporates and startups.
 
 
-# Installation Guide
+# Installation Guide (Composer mode)
+
+> ## ⚠️ Fresh installations only
+>
+> When the extension is set up, TYPO3 imports the demo data from `ext_tables_static+adt.sql`
+> and **empties these tables first**:
+> `pages`, `tt_content`, `sys_file`, `sys_file_metadata`, `sys_file_reference`, `sys_template`.
+>
+> - **Never install this extension into a site that already has content.**
+> - This happens every time `vendor/bin/typo3 extension:setup` runs. Many deployment
+>   scripts run it automatically after `composer install`.
+> - TYPO3 re-imports the file whenever its content changes. Do not edit or delete
+>   `ext_tables_static+adt.sql` after you start working on the site.
 
 ## 1. Overview
 
@@ -16,17 +28,18 @@ Corporate Template is a custom TYPO3 frontend template extension.
 | Extension Key | `corporate_template` |
 | Composer Package | `corporate_template/corporate_template` |
 | Extension Version | 3.0.0 |
-| TYPO3 Compatibility | TYPO3 13.4 / 14.3+ |
-| Installation Method | Composer |
+| TYPO3 Compatibility | TYPO3 13.4 / 14.3 |
+| PHP | 8.2 – 8.5 |
+| Installation Method | Composer (this guide) |
 
 ## 2. Prerequisites
 
 Before installing the extension, ensure that you have:
 
-- A working TYPO3 Composer-based installation.
-- PHP 8.2 or higher.
+- A **fresh** TYPO3 13.4 or 14.3 Composer-based installation (no existing content).
+- PHP 8.2 – 8.5.
 - Composer installed.
-- A compatible TYPO3 version.
+- Shell access to the project (for `vendor/bin/typo3`).
 - Access to the Corporate Template 3.0.0 ZIP package.
 
 The extension declares these mandatory TYPO3 dependencies:
@@ -54,9 +67,8 @@ corporate_template/
 ├── composer.json
 ├── ext_emconf.php
 ├── ext_localconf.php
-├── ext_tables.php
-├──ext_tables_static+adt.sql
-└──ext_tables.sql
+├── ext_tables_static+adt.sql
+└── ext_tables.sql
 ```
 
 ## 4. Install Corporate Template
@@ -105,9 +117,13 @@ typo3-project/
 
 ### Step 4: Configure the Composer path repository
 
-Open the main project `composer.json`.
+Run:
 
-Add the following repository configuration under `repositories`:
+```bash
+composer config repositories.local path 'packages/*'
+```
+
+Or open the main project `composer.json` and add the following entry under `repositories`:
 
 ```json
 {
@@ -132,15 +148,19 @@ Composer will register the local extension and resolve its mandatory dependencie
 
 The Corporate Template supports additional integrations.
 
-| Extension | Composer Package | Suggested Version |
-|---|---|---|
-| Powermail | `in2code/powermail` | 13.3.0 |
-| Go Maps | `clickstorm/go-maps-ext` | 8.1.0 |
-| CS SEO | `clickstorm/cs-seo` | ^9 for TYPO3 13 |
+| Extension | Composer Package | TYPO3 13.4 | TYPO3 14.3 |
+|---|---|---|---|
+| Powermail (contact form) | `in2code/powermail` | ^13.3 | no release yet |
+| Go Maps (map) | `clickstorm/go-maps-ext` | ^8.1 | ^8.1 |
+| CS SEO (SEO fields) | `clickstorm/cs-seo` | ^9 | ^10 |
 
-These integrations are optional and are not required for the basic Corporate Template installation.
+These integrations are optional. Without them, the template still works, and their content
+elements simply render nothing.
 
-To install Powermail:
+**Install them before running the setup in section 7.** Then the demo contact form
+and map records are imported, and their site sets are added automatically.
+
+To install Powermail (TYPO3 13.4 only):
 
 ```bash
 composer require in2code/powermail:^13.3
@@ -152,10 +172,14 @@ To install Go Maps:
 composer require clickstorm/go-maps-ext:^8.1
 ```
 
-To install CS SEO on TYPO3 13:
+To install CS SEO:
 
 ```bash
+# TYPO3 13.4
 composer require clickstorm/cs-seo:^9
+
+# TYPO3 14.3
+composer require clickstorm/cs-seo:^10
 ```
 
 Check package compatibility before installing optional extensions.
@@ -178,7 +202,7 @@ composer show corporate_template/corporate_template
 
 For a local path repository, Composer may display `dev-main` as the package version. The extension's own version is defined in `ext_emconf.php`.
 
-## 7. Database Configuration
+## 7. Set Up Database and Demo Content
 
 Before applying database changes, create a database backup.
 
@@ -188,56 +212,101 @@ Example:
 mariadb-dump -u USERNAME -p DATABASE_NAME > database_backup.sql
 ```
 
-Next:
+Then run the setup and flush the caches:
 
-1. Log in to the TYPO3 backend.
-2. Open **Admin Tools → Maintenance**.
-3. Select **Analyze Database Structure**.
-4. Run the database comparison.
-5. Review the proposed changes.
-6. Apply only the changes required by the installed extensions.
+```bash
+vendor/bin/typo3 extension:setup
+vendor/bin/typo3 cache:flush
+```
 
-After applying the changes, verify that the database schema is up to date.
+The setup:
 
-**Important:** Do not import demo data unless you explicitly intend to create demo records. Preserve existing pages and content.
+- creates the database tables and fields of the extension,
+- imports the demo pages and content (English + German),
+- copies the demo images to `fileadmin/corporate_template/`,
+- writes the site configuration to `config/sites/corporate-template/config.yaml`
+  and adds the site set `corporate-template/site`. If the TYPO3 installer already created
+  a site for root page 1, that site is replaced. Its `base` (your domain) is kept, and
+  its placeholder `setup.typoscript` is renamed to `setup.typoscript.bak`,
+- if Powermail / Go Maps are installed: imports the demo contact form and map records
+  and adds their site sets.
+
+**Optional check in the backend:** open **Admin Tools → Maintenance → Analyze Database
+Structure** and confirm that no changes are left.
+
+<img width="1920" height="869" alt="Admin Tools – Maintenance – Analyze Database Structure" src="https://github.com/user-attachments/assets/0d707e1e-f3b3-4558-a016-96ff7cb81264" />
+
+> **Note:** *Analyze Database Structure* only creates tables and fields. It does **not**
+> import the demo content or write the site configuration. Use `extension:setup` for that.
 
 ## 8. Configure Corporate Template TypoScript
 
-1. Open the TYPO3 backend.
-2. Navigate to **Web → Template**.
-3. Select the website's root page.
-4. Open the TypoScript template record.
-5. Select the **Includes** tab.
-6. Find **Include static (from extensions)**.
-7. Add:
+### Recommended: site set (already done by the setup)
 
-```text
-corporate_template (corporate_template)
-```
+1. Open **Site Management → Sites**.
+2. Edit the site of the root page.
+3. Check that **Sets** includes `corporate-template/site`.
 
-8. Save the template record.
-9. Clear TYPO3 caches.
+The site set provides TypoScript and page TSconfig (backend layouts, RTE preset).
+It depends on `typo3/fluid-styled-content`, which is loaded automatically.
 
-Make sure the required Fluid Styled Content configuration is also included.
+### Alternative: `sys_template` based sites
+
+Use this only if your site does **not** use the site set.
+
+1. Open **Site Management → TypoScript**.
+2. Select the website's root page.
+3. Edit the TypoScript template record.
+4. On the **Advanced Options** tab, find **Include TypoScript sets** (static templates).
+5. Add **Corporate Template (corporate_template)** and **Fluid Styled Content**.
+6. Save the template record.
+7. Open the root page properties → **Resources** tab → **Page TSconfig** and include
+   **Corporate Template** (backend layouts and RTE preset).
+8. Clear TYPO3 caches.
+
+> **Do not combine both.** If the site set `corporate-template/site` is active, do not also
+> include the static TypoScript. Otherwise the TypoScript is loaded twice.
+
+### Constants
+
+| Constant | Default | Meaning |
+|---|---|---|
+| `plugin.tx_corporatetemplate.settings.homePageUid` | `2` | Page that holds logo, footer and map |
+
+Change it if your home page is not page `2`. Constants are defined in
+`Configuration/TypoScript/Main/constants.typoscript`, and the template path overrides are there too.
+
+### Google Maps API key
+
+If Go Maps is installed, set your own API key in **Site Management → Settings** or with the
+constant `plugin.tx_gomapsext.settings.apiKey`.
 
 ## 9. Configure the Website
 
-Verify that your TYPO3 site configuration points to the correct root page.
+Open **Site Management → Sites** and verify that the site configuration written by the setup is correct.
 
 Check:
 
-- Site identifier.
-- Base URL.
+- Site identifier (`corporate-template`).
+- Base URL (your domain).
 - Root page ID.
-- Language configuration.
+- Language configuration (English default, German).
 
-Do not overwrite an existing site configuration unnecessarily.
+### Adding a language
+
+Languages are configured in the site configuration only. No TypoScript changes are needed.
+
+1. **Site Management → Sites → Edit → Languages** → add the language
+   (e.g. Italian, base `/it/`, navigation title `IT`).
+2. Translate the pages and content in the **Page** module.
+
+The language menu shows every language that is available for the current page.
 
 ## 10. Frontend Verification
 
 Open your website in a browser.
 
-Verify the following:
+Verify the following (these sections come from the demo content):
 
 - Corporate Template frontend design loads.
 - Header and navigation display correctly.
@@ -249,9 +318,10 @@ Verify the following:
 - Portfolio section displays.
 - Contact section displays.
 - Contact form works when Powermail is installed.
-- Map works when Go Maps is installed.
+- Map works when Go Maps is installed (API key required).
 
-If the frontend displays an error, inspect the TYPO3 logs and verify the Fluid template paths and TypoScript configuration.
+If the frontend displays an error, inspect the TYPO3 logs (`var/log/`) and verify the
+site set or TypoScript configuration.
 
 ## 11. Troubleshooting
 
@@ -265,23 +335,31 @@ composer show corporate_template/corporate_template
 
 Check the Composer path repository and extension folder.
 
-### Database schema errors
+### `Table '...tx_corporatetemplate_bannerimagesbox' doesn't exist`
 
-Open:
+The tables were not created yet. Run:
 
-**Admin Tools → Maintenance → Analyze Database Structure**
+```bash
+vendor/bin/typo3 extension:setup
+vendor/bin/typo3 cache:flush
+```
 
-Review the missing tables and fields.
+Or open **Admin Tools → Maintenance → Analyze Database Structure** and apply all suggestions.
 
-### Frontend template not rendering
+### Frontend is blank or unstyled
 
 Check:
 
-- TypoScript template inclusion.
-- Fluid template paths.
-- Template file availability.
-- Page layout configuration.
+- The site includes the set `corporate-template/site` (**Site Management → Sites**).
+- The static TypoScript is **not** included as well (see section 8).
+- The site configuration points to the correct root page and base URL.
+- Page layout (backend layout `home` / `normal`).
 - TYPO3 error logs.
+
+### Demo sections are missing
+
+The banner, services, skills, clients, team and portfolio sections are demo records.
+They are only present if `vendor/bin/typo3 extension:setup` has run (section 7).
 
 ### Clear cache
 
@@ -294,8 +372,8 @@ vendor/bin/typo3 cache:flush
 Corporate Template installation is complete when:
 
 - The extension is active.
-- Required database schema is available.
-- TypoScript is included.
+- `extension:setup` has run (database schema and demo content are available).
+- The site set `corporate-template/site` is active (or the static TypoScript is included, not both).
 - Site configuration is correct.
 - Frontend pages render successfully.
 
