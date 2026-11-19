@@ -245,10 +245,9 @@ Structure** and confirm that no changes are left.
 
 1. Open **Site Management → Sites**.
 2. Edit the site of the root page.
-3. Check that **Sets** includes `corporate-template/site`.
-
-   #Screenshots
    <img width="1920" height="869" alt="image" src="https://github.com/user-attachments/assets/34fa9ad6-163f-4033-86fe-18256ea3327b" />
+
+4. Check that **Sets** includes `corporate-template/site`.
 
    <img width="1920" height="869" alt="image" src="https://github.com/user-attachments/assets/cce0a236-fef9-43b9-b92a-cc9d1effe60d" />
 
