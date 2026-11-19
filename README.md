@@ -248,7 +248,7 @@ Structure** and confirm that no changes are left.
    
    <img width="1920" height="869" alt="image" src="https://github.com/user-attachments/assets/34fa9ad6-163f-4033-86fe-18256ea3327b" />
 
-4. Check that **Sets** includes `corporate-template/site`.
+4. Check that **Sets** includes `Corporate Template`.
 
    <img width="1920" height="869" alt="image" src="https://github.com/user-attachments/assets/a06aaf3d-694b-42ab-aa53-17d18d2634ac" />
 
@@ -270,7 +270,7 @@ Use this only if your site does **not** use the site set.
    **Corporate Template** (backend layouts and RTE preset).
 8. Clear TYPO3 caches.
 
-> **Do not combine both.** If the site set `corporate-template/site` is active, do not also
+> **Do not combine both.** If the site set `Site Management → Sites → Edit → Languages → add the language (e.g. German, base /de/, navigation title DE).` is active, do not also
 > include the static TypoScript. Otherwise the TypoScript is loaded twice.
 
 ### Constants
@@ -304,9 +304,9 @@ Languages are configured in the site configuration only. No TypoScript changes a
 
 1. **Site Management → Sites → Edit → Languages** → add the language
    (e.g. German, base `/de/`, navigation title `DE`).
+   <img width="1920" height="2102" alt="image" src="https://github.com/user-attachments/assets/92b67c91-044c-4c02-89f2-bfafe6e700b0" />
+
 2. Translate the pages and content in the **Page** module.
-#Screenshots
-<img width="1920" height="2102" alt="image" src="https://github.com/user-attachments/assets/92b67c91-044c-4c02-89f2-bfafe6e700b0" />
 
 The language menu shows every language that is available for the current page.
 
@@ -358,7 +358,7 @@ Or open **Admin Tools → Maintenance → Analyze Database Structure** and apply
 
 Check:
 
-- The site includes the set `corporate-template/site` (**Site Management → Sites**).
+- The site includes the set `Site Management → Sites → Edit → Languages → add the language (e.g. German, base /de/, navigation title DE).` (**Site Management → Sites**).
 - The static TypoScript is **not** included as well (see section 8).
 - The site configuration points to the correct root page and base URL.
 - Page layout (backend layout `home` / `normal`).
