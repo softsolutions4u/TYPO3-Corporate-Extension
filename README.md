@@ -304,7 +304,7 @@ Check:
 Languages are configured in the site configuration only. No TypoScript changes are needed.
 
 1. **Site Management → Sites → Edit → Languages** → add the language
-   (e.g. Italian, base `/it/`, navigation title `IT`).
+   (e.g. German, base `/de/`, navigation title `DE`).
 2. Translate the pages and content in the **Page** module.
 
 The language menu shows every language that is available for the current page.
