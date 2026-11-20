@@ -1,7 +1,7 @@
 {
     "name": "corporate_template/corporate_template",
     "type": "typo3-cms-extension",
-    "description": "Corporate - One page responsive business template for TYPO3 13 LTS and 14 LTS",
+    "description": "A one-page responsive template for small businesses, corporates and startups.",
     "homepage": "https://www.softsolutions4u.com/",
     "license": [
         "GPL-2.0-or-later"
