@@ -6,7 +6,7 @@
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Corporate - Business responsive template',
-    'description' => 'One page responsive template ideally suited for small businesses, corporates and startups. IMPORTANT: Install it only in a fresh TYPO3 installation - the demo data replaces existing pages and content.',
+    'description' => 'Corporate - One page responsive business template for TYPO3 13 LTS and 14 LTS, This release supports TYPO3 9.5 LTS and is no longer actively maintained. The new version for TYPO3 13.4 will be released next week. Stay tuned! Need help upgrading or migrating? Write to us at typo3support@softsolutions4u.com.', 
     'category' => 'distribution',
     'constraints' => [
         'depends' => [
