@@ -28,7 +28,7 @@ Corporate Template is a custom TYPO3 frontend template extension.
 | Extension Key | `corporate_template` |
 | Composer Package | `corporate_template/corporate_template` |
 | Extension Version | 3.0.0 |
-| TYPO3 Compatibility | TYPO3 13.4 / 14.3 |
+| TYPO3 Compatibility | TYPO3 13.4 LTS and 14.3 LTS (all patch releases) |
 | PHP | 8.2 – 8.5 |
 | Installation Method | Composer (this guide) |
 
