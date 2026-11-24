@@ -388,15 +388,15 @@ Corporate Template installation is complete when:
 Developed and maintained by **[SoftSolutions4U](https://www.softsolutions4u.com/)**:
 
 - Logesh (Developer)
-- ManiMaran (QA)
+- Manimaran (QA)
 
 ---
 
 ## Support
 
 * Bug reports and feature requests: [Open an issue on GitHub](https://github.com/softsolutions4u/TYPO3-Corporate-Extension/issues) to report bugs, suggest improvements, or request features.
-* Commercial support and custom TYPO3 development: [Soft Solutions4U](https://www.softsolutions4u.com/) provides professional assistance for businesses using TYPO3, including installation and configuration of the Corporate Template, theme and layout customization, TYPO3 version upgrades, custom extension development, and third-party integrations.
-- Contact us: <info@softsolutions4u.com>
+* Commercial support and custom TYPO3 development: [SoftSolutions4U](https://www.softsolutions4u.com/) provides professional assistance for businesses using TYPO3, including installation and configuration of the Corporate Template, theme and layout customization, TYPO3 version upgrades, custom extension development, and third-party integrations.
+- Contact us: <typo3support@softsolutions4u.com>
 
 The extension is available free of charge under the license specified in
 this repository. Commercial support and custom development services are
