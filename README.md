@@ -355,8 +355,7 @@ Or open **Admin Tools → Maintenance → Analyze Database Structure** and apply
 
 Check:
 
-- The site includes the set `Site Management → Sites → Edit → Languages → add the language (e.g. German, base /de/, navigation title DE).` (**Site Management → Sites**).
-- The static TypoScript is **not** included as well (see section 8).
+- Go to Admin Tools > Maintenance > Analyze Database Structure, select the Corporate Template tables it lists, and click Apply selected changes.
 - The site configuration points to the correct root page and base URL.
 - Page layout (backend layout `home` / `normal`).
 - TYPO3 error logs.
