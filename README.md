@@ -60,6 +60,7 @@ The extension declares these mandatory TYPO3 dependencies:
 
 ```text
 corporate_template/
+├── Build/
 ├── Classes/
 ├── Configuration/
 ├── Initialisation/
