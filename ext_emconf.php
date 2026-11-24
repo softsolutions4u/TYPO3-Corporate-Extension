@@ -6,7 +6,7 @@
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Corporate - Business responsive template',
-    "description": "A one-page responsive template for small businesses, corporates, and startups. 👉 https://corporate.typo3.softsolutions4u.com/ Version note: This release supports TYPO3 13.4 and 14.3. Need help upgrading or migrating? Write to us at typo3support@softsolutions4u.com. Before you install: This extension is built for new TYPO3 installations. It sets up its own pages and will replace any pages already on your site, so we recommend starting from a fresh setup. If masking doesn't work as expected, check your Apache ModSecurity settings. Support: Questions? We're happy to help at typo3support@softsolutions4u.com.",
+    "description": "A one-page responsive template for small businesses, corporates, and startups. 👉 https://corporate.typo3.softsolutions4u.com/ Version note: This release supports TYPO3 13.4 LTS and 14.3 LTS (all patch releases). Need help upgrading or migrating? Write to us at typo3support@softsolutions4u.com. Before you install: This extension is built for new TYPO3 installations. It sets up its own pages and will replace any pages already on your site, so we recommend starting from a fresh setup. If masking doesn't work as expected, check your Apache ModSecurity settings. Support: Questions? We're happy to help at typo3support@softsolutions4u.com.",
     'category' => 'distribution',
     'constraints' => [
         'depends' => [
