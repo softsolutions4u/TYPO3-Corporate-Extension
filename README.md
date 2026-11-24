@@ -36,7 +36,7 @@ Corporate Template is a custom TYPO3 frontend template extension.
 
 Before installing the extension, ensure that you have:
 
-- A **fresh** TYPO3 13.4 or 14.3 Composer-based installation (no existing content).
+- A **fresh** TYPO3 13.4 LTS or 14.3 LTS Composer-based installation (no existing content).
 - PHP 8.2 – 8.5.
 - Composer installed.
 - Shell access to the project (for `vendor/bin/typo3`).
