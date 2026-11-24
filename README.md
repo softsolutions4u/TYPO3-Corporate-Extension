@@ -104,6 +104,7 @@ typo3-project/
 ├── config/
 ├── packages/
 │   └── corporate_template/
+|       ├── Build/
 │       ├── Classes/
 │       ├── Configuration/
 │       ├── Initialisation/
