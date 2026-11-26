@@ -1,4 +1,4 @@
--- Demo data of EXT:corporate_template for TYPO3 13.4 / 14.3
+-- Demo data of EXT:corporate_template for TYPO3 13.4 LTS / 14.3 LTS
 --
 -- IMPORTANT: TYPO3 imports this file when the extension is set up for the first
 -- time and EMPTIES (truncates) every table listed here before inserting the rows:
